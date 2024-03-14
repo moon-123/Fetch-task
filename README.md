@@ -14,27 +14,26 @@ Data Fetch해서 table로 띄우기
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fetch</title>
-    <style>
-        #table { font-size: 20px; font-style: italic;}
-        table { border: 1px solid black; border-collapse: collapse;}
-        th { border: 1px solid black; background-color: antiquewhite; padding: 10px;}
-        td { border: 1px solid black; font-size: 15px; padding: 10px; text-align: center;}
-        #body > table > tbody > tr:nth-child(1) > th:nth-child(1) { font-size: 22px; background-color: rgb(255, 210, 150);}
-    </style>
 </head>
 <body id="body">
-    <script>
-      ...(1)
-    </script>
+
 </body>
 </html>
 ```
 
-> script (1)
+> css
+```
+#table { font-size: 20px; font-style: italic;}
+table { border: 1px solid black; border-collapse: collapse;}
+th { border: 1px solid black; background-color: antiquewhite; padding: 10px;}
+td { border: 1px solid black; font-size: 15px; padding: 10px; text-align: center;}
+#body > table > tbody > tr:nth-child(1) > th:nth-child(1) { font-size: 22px; background-color: rgb(255, 210, 150);}
+```
+
+> script
 
 ```javascript
-<script>
-        const dat = fetch('https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0')
+const dat = fetch('https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0')
         .then((response) => {
             return response.json();
         })
@@ -107,6 +106,6 @@ Data Fetch해서 table로 띄우기
             body.innerHTML = `${main}`
             // console.log(`table: ${main}`);
         }
-        makeTable(dat);
-    </script>
+        
+makeTable(dat);
 ```
