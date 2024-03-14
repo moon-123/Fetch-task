@@ -1,10 +1,13 @@
 # FetchDateTask
 Data Fetch해서 table로 띄우기
 
+### 이미지 예시
+
 <img width="1678" alt="image" src="https://github.com/moon-123/FetchDateTask/assets/59769304/414dbf61-8d64-413d-a3cb-176f7fa84325">
 
+### 코드 예시
 
-> HTML 코드
+> HTML
 
 ```HTML
 <!DOCTYPE html>
@@ -21,8 +24,9 @@ Data Fetch해서 table로 띄우기
 </html>
 ```
 
-> css
-```
+> CSS
+
+```css
 #table { font-size: 20px; font-style: italic;}
 table { border: 1px solid black; border-collapse: collapse;}
 th { border: 1px solid black; background-color: antiquewhite; padding: 10px;}
@@ -30,7 +34,7 @@ td { border: 1px solid black; font-size: 15px; padding: 10px; text-align: center
 #body > table > tbody > tr:nth-child(1) > th:nth-child(1) { font-size: 22px; background-color: rgb(255, 210, 150);}
 ```
 
-> script
+> JS
 
 ```javascript
 const dat = fetch('https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0')
